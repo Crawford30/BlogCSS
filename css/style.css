@@ -17,8 +17,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Candal', serif;
 	color: #444;
 
+	margin: 5px;
+
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
 /*making every element to have a white color */
 
 header *{
@@ -77,6 +83,8 @@ header ul li ul{
 
 	/*hide drop down*/
 	display: none;
+
+	z-index: 9999999;
 }
 
 
@@ -132,34 +140,71 @@ header .menu-toggle{
 	display: none;
 }
 
+/*STYLING ANCHOR TAGS IN PAGE WRAPPER*/
+.page-wrapper a:hover {
+
+	color: #006669;
+
+}
+
+
 /*POST SLIDER*/
 .post-slider {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 
 	position: relative;
 }
 
 .post-slider .post-wrapper{
+	padding: 10px 0 10px 0;
 
 	width: 84%;
 	height: 350px;
 	margin: 0 auto; /*auto ensures that its horizontally centerlised */
 	overflow: hidden;
-	border: 1px dashed red;
+	/*border: 1px dashed red;*/
 
 }
 
 .post-slider .post-wrapper .post{
 
 	width: 300px;
-	height: 350px;
+	height: 330px;
 	margin: 0 10px;  /*top margin 0, side margins 10px */
 
 	display: inline-block; /*to display horizontal */
 
-	background: #05f7ff;
+	/*background: #05f7ff;*/
+
+	background: #fff;
+
+	border-radius: 5px;
+
+	box-shadow: 1px 1px 1px -1px #a0a0a033;
 
 }
+
+
+.post-slider .post-wrapper .post .post-info {
+	height: 130px; /* remaing height after adding the height of the image */
+	/*border: 1px solid red;*/
+
+	padding: 0px 5px;
+
+	
+}
+
+/*slider image */
+.post-slider .post-wrapper .post .slider-image {
+
+	width: 100%;
+
+	height: 200px;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+}  
 
 .post-slider .slider-title{
 	text-align: center;
