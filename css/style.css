@@ -73,12 +73,10 @@ header ul li ul{
 	display: none;
 }
 
+
 /*Display when a user hover on elemnt in the ul of li */
-
 header ul li:hover ul{
-
 	display: block;
-
 }
 
 
@@ -124,6 +122,103 @@ header ul li a:hover{
 
 
 header .menu-toggle{
-	/*hide it by diving property display none */
+	/*hide it by giving property display none on large device */
 	display: none;
 }
+
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 750px) {
+
+	header {
+		position: relative; /*use to postion the toggle menu*/
+	}
+
+
+
+	/*grap navigation menu*/
+	header ul {
+		width: 100%;
+		background: #0E94A0;
+		/*the nav should hide on samll device, we give it a max height of 0*/
+		max-height: 0px;
+
+		/*border: solid 1px red; */
+
+		/*hide any overflow*/
+		overflow: hidden;
+
+
+
+	}
+
+/*give it a max height of the normal navigation menu, for shoiwing the navigation menu on small device*/
+	.showing {
+		max-height: 100em;
+	}
+
+
+    /*makes the nav items 100% width */
+	header ul li{
+		width: 100%;
+	
+}
+
+/*select drop down, child element*/
+
+header ul li ul{
+	position: static;
+	width: 100%; 
+	display: block;
+	background: inherit; /*inherit from the parent*/
+}
+
+
+
+header ul li ul li a{
+	padding: 10px;
+	color: #fff;
+	background: #0E94A0;
+	padding-left: 50px;
+
+}
+header ul li ul li a:hover{
+	background: #006669;
+
+}
+
+
+/*A link with a class of logout*/
+header ul li ul li a.logout{
+
+	color: red; 
+
+}
+
+header .menu-toggle{
+	/*show it by giving property display none on small device */
+	display: block;
+
+	position: absolute;
+
+	right: 20px;
+	top: 20px;
+	font-size: 1.9em;
+
+	/*border: solid 1px red;*/
+}
+
+
+
+header .logo {
+	
+	/*border: solid 1px red;*/
+	margin-left: 0.5em;
+
+}
+
+
+
+	
+}
+
