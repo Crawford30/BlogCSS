@@ -1,0 +1,129 @@
+/*removing the padding by h1 in the logo */
+
+* {
+	box-sizing: border-box;
+}
+
+/*removing the padding by the body */
+body {
+	padding: 0px;
+	margin: 0px;
+	background: #f6f6f6;
+	font-family: 'Lora', serif;
+}
+
+
+/*making every element to have a white color */
+
+header *{
+	color: #fff;
+}
+header{
+	background: #008485;
+	height: 66px;
+}
+
+header .logo {
+	float: left; 
+	height: inherit; /*gets the parent height ie 66*/
+
+	/*border: solid 1px red;*/
+	margin-left: 2em;
+
+}
+
+/*gets the text to center*/
+
+header .logo-text{
+	margin: 9px; 
+	text-align: center;
+	font-family: 'Candal', serif;
+}
+/*selecting span elementt */
+
+header .logo-text span {
+	color:  #5f84f5;
+}
+
+/*nav menu float to the right */
+header ul {
+	float: right; 
+	/*border: solid 1px red;*/
+	/*remove the margin and padding  and list style*/
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+/*select the li and float to left so it assumes a hotizontal display*/
+header ul li{
+	float: left;
+	position: relative;
+}
+
+/*select drop down, child element*/
+
+header ul li ul{
+	position: absolute;
+	top: 66px; /*to push it 66*/
+	right: 0px; /*right distance shoild be the same as parent*/
+	width: 180px;
+
+	/*hide drop down*/
+	display: none;
+}
+
+/*Display when a user hover on elemnt in the ul of li */
+
+header ul li:hover ul{
+
+	display: block;
+
+}
+
+
+
+
+header ul li ul li{
+/*same width as its parent, ie 180px*/
+	width: 100%;
+
+}
+
+header ul li ul li a{
+	padding: 10px;
+	color: #444;
+	background: #fff;
+}
+
+
+/*A link with a class of logout*/
+header ul li ul li a.logout{
+
+	color: red; 
+
+}
+
+header ul li ul li a:hover{
+	color: #d5d6d6;
+}
+
+
+
+header ul li a{
+	display: block;
+	padding: 21px;
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+header ul li a:hover{
+	background: #006669;
+	transition: 0.5s;
+}
+
+
+header .menu-toggle{
+	/*hide it by diving property display none */
+	display: none;
+}
