@@ -12,6 +12,12 @@ body {
 	font-family: 'Lora', serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: 'Candal', serif;
+	color: #444;
+
+}
 
 /*making every element to have a white color */
 
@@ -126,6 +132,65 @@ header .menu-toggle{
 	display: none;
 }
 
+/*POST SLIDER*/
+.post-slider {
+	border: 1px solid red;
+
+	position: relative;
+}
+
+.post-slider .post-wrapper{
+
+	width: 84%;
+	height: 350px;
+	margin: 0 auto; /*auto ensures that its horizontally centerlised */
+	overflow: hidden;
+	border: 1px dashed red;
+
+}
+
+.post-slider .post-wrapper .post{
+
+	width: 300px;
+	height: 350px;
+	margin: 0 10px;  /*top margin 0, side margins 10px */
+
+	display: inline-block; /*to display horizontal */
+
+	background: #05f7ff;
+
+}
+
+.post-slider .slider-title{
+	text-align: center;
+	margin: 30px auto; /*margin 30px ontop and centralised using auto */
+
+}
+
+.post-slider .next {
+
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	font-size: 2em;
+	color: #006669;
+	cursor: pointer;
+
+
+}
+
+.post-slider .prev {
+
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	font-size: 2em;
+	color: #006669;
+	cursor: pointer;
+
+
+}
+
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 750px) {
@@ -147,8 +212,6 @@ header .menu-toggle{
 
 		/*hide any overflow*/
 		overflow: hidden;
-
-
 
 	}
 
@@ -190,17 +253,13 @@ header ul li ul li a:hover{
 
 /*A link with a class of logout*/
 header ul li ul li a.logout{
-
 	color: red; 
-
 }
 
 header .menu-toggle{
 	/*show it by giving property display none on small device */
 	display: block;
-
 	position: absolute;
-
 	right: 20px;
 	top: 20px;
 	font-size: 1.9em;

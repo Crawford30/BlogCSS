@@ -9,4 +9,21 @@ $(document).ready(function() {
 
 	});
 
+
+/*autoplay is the class of the container that holds all the element but we use post wrapper*/
+$('.post-wrapper').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+
+  nextArrow: $('.next'), /*using the next btton class from the font awesome lib*/
+  prevArrow: $('.prev'),
+
+
+
+});
+	
+
+
 });
